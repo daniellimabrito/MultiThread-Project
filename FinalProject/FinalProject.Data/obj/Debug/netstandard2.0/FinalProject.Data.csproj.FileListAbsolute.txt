@@ -1,0 +1,12 @@
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Data.deps.json
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Data.dll
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.csprojAssemblyReference.cache
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.csproj.CoreCompileInputs.cache
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.AssemblyInfoInputs.cache
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.AssemblyInfo.cs
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Domain.dll
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Data.pdb
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Domain.pdb
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.csproj.CopyComplete
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.dll
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.pdb

@@ -1,0 +1,16 @@
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\bin\Debug\netcoreapp2.1\ConsoleApp1.deps.json
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\bin\Debug\netcoreapp2.1\ConsoleApp1.runtimeconfig.json
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\bin\Debug\netcoreapp2.1\ConsoleApp1.runtimeconfig.dev.json
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\bin\Debug\netcoreapp2.1\ConsoleApp1.dll
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\bin\Debug\netcoreapp2.1\ConsoleApp1.pdb
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\bin\Debug\netcoreapp2.1\FinalProject.Data.dll
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\bin\Debug\netcoreapp2.1\FinalProject.Domain.dll
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\bin\Debug\netcoreapp2.1\FinalProject.Data.pdb
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\bin\Debug\netcoreapp2.1\FinalProject.Domain.pdb
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\obj\Debug\netcoreapp2.1\ConsoleApp1.csprojAssemblyReference.cache
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\obj\Debug\netcoreapp2.1\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\obj\Debug\netcoreapp2.1\ConsoleApp1.AssemblyInfoInputs.cache
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\obj\Debug\netcoreapp2.1\ConsoleApp1.AssemblyInfo.cs
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\obj\Debug\netcoreapp2.1\ConsoleApp1.csproj.CopyComplete
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\obj\Debug\netcoreapp2.1\ConsoleApp1.dll
+D:\Daniel\BCIT\COMP3618\FinalProject\ConsoleApp1\obj\Debug\netcoreapp2.1\ConsoleApp1.pdb

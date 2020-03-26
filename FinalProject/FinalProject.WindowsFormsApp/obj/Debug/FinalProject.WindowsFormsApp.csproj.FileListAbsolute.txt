@@ -1,0 +1,17 @@
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\bin\Debug\FinalProject.WindowsFormsApp.exe.config
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\bin\Debug\FinalProject.WindowsFormsApp.exe
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\bin\Debug\FinalProject.WindowsFormsApp.pdb
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\obj\Debug\FinalProject.WindowsFormsApp.Properties.Resources.resources
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\obj\Debug\FinalProject.WindowsFormsApp.csproj.GenerateResource.cache
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\obj\Debug\FinalProject.WindowsFormsApp.csproj.CoreCompileInputs.cache
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\obj\Debug\FinalProject.WindowsFormsApp.exe
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\obj\Debug\FinalProject.WindowsFormsApp.pdb
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\bin\Debug\FinalProject.Domain.dll
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\bin\Debug\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\bin\Debug\Newtonsoft.Json.dll
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\bin\Debug\FinalProject.Domain.pdb
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\bin\Debug\Microsoft.AspNetCore.Mvc.Formatters.Json.xml
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\bin\Debug\Newtonsoft.Json.xml
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\obj\Debug\FinalProject.WindowsFormsApp.csprojAssemblyReference.cache
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\obj\Debug\FinalProject.WindowsFormsApp.csproj.CopyComplete
+D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.WindowsFormsApp\obj\Debug\FinalProject.WindowsFormsApp.FormMain.resources
