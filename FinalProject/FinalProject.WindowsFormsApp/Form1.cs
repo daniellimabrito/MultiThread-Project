@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinalProject.Domain.Model;
-using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace FinalProject.WindowsFormsApp
@@ -19,6 +17,9 @@ namespace FinalProject.WindowsFormsApp
     public partial class FormMain : Form
     {
         private readonly BackgroundWorker _worker = null;
+        static HttpClient client = new HttpClient();
+
+        const string baseUrl = "http://localhost:54503/api/operation";
 
         public FormMain()
         {
@@ -57,7 +58,7 @@ namespace FinalProject.WindowsFormsApp
                 _pi.AppendText("<<Cancelled>>");
             }
             _calcButtom.Text = _calcButtom.Text == "Calculate" ? "Cancel" : "Calculate";
-          //  dataGridView1.DataSource = GetOperations();
+            dataGridView1.DataSource = GetOperations();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -145,23 +146,25 @@ namespace FinalProject.WindowsFormsApp
 
         private List<Operation> GetOperations()
         {
-            string URL = "http://localhost:54503/api/operation";
+            string URL = baseUrl;
 
             var data = webGetMethod(URL);
 
             return JsonConvert.DeserializeObject<List<Operation>>(data); ;
         }
 
-        private void callWebServices()
+        private void SetOperation(string name, double executionTime)
         {
-            string postData = "user_id=25689&passwd=123456";
-            string URL = "http://localhost:54503/api/operation";
-            var data = webPostMethod(postData, URL);
-            Console.WriteLine(data);
+            string postData = $"name={name}&ExecutionTime={executionTime}";
+         
 
-            var getData = webGetMethod(URL);
-            Console.WriteLine(getData);
+            var dat = new Operation() { Name = name, ExecutionTime = executionTime };
+            var test = CreateProductAsync(dat);
+
+            var a = test;
         }
+
+
 
         public string webGetMethod(string URL)
         {
@@ -182,34 +185,43 @@ namespace FinalProject.WindowsFormsApp
             return jsonString;
         }
 
-        public string webPostMethod(string postData, string URL)
-        {
-            string responseFromServer = "";
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
-            request.Method = "POST";
-            request.Credentials = CredentialCache.DefaultCredentials;
-            ((HttpWebRequest)request).UserAgent =
-                              "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 7.1; Trident/5.0)";
-            request.Accept = "/";
-            request.UseDefaultCredentials = true;
-            request.Proxy.Credentials = System.Net.CredentialCache.DefaultCredentials;
-            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
-            request.ContentType = "application/x-www-form-urlencoded";
-            request.ContentLength = byteArray.Length;
-            Stream dataStream = request.GetRequestStream();
-            dataStream.Write(byteArray, 0, byteArray.Length);
-            dataStream.Close();
 
-            WebResponse response = request.GetResponse();
-            dataStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(dataStream);
-            responseFromServer = reader.ReadToEnd();
-            reader.Close();
-            dataStream.Close();
-            response.Close();
-            return responseFromServer;
+        static async Task<Operation> GetOperationAllAsync(string path)
+        {
+            Operation operation = null;
+            HttpResponseMessage response = await client.GetAsync(path);
+            if (response.IsSuccessStatusCode)
+            {
+                operation = await response.Content.ReadAsAsync<Operation>();
+            }
+            return operation;
         }
 
+        static async Task<Uri> CreateProductAsync(Operation operation)
+        {
+            HttpResponseMessage response = await client.PostAsJsonAsync(
+                baseUrl, operation);
+             //   "/api/opertion", operation);
+            response.EnsureSuccessStatusCode();
 
+            // return URI of the created resource.
+            return response.Headers.Location;
+        }
+
+        static async Task<Operation> GetProductAsync(string path)
+        {
+            Operation operation = null;
+            HttpResponseMessage response = await client.GetAsync(path);
+            if (response.IsSuccessStatusCode)
+            {
+                operation = await response.Content.ReadAsAsync<Operation>();
+            }
+            return operation;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SetOperation("Method A", 1.3);
+        }
     }
 }

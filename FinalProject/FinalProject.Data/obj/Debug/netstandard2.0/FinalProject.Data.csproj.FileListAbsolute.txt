@@ -10,3 +10,15 @@ D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\
 D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.csproj.CopyComplete
 D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.dll
 D:\Daniel\BCIT\COMP3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.pdb
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Data.deps.json
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Data.dll
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Data.pdb
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Domain.dll
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Domain.pdb
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.csprojAssemblyReference.cache
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.csproj.CoreCompileInputs.cache
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.AssemblyInfoInputs.cache
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.AssemblyInfo.cs
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.csproj.CopyComplete
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.dll
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.pdb

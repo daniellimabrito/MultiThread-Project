@@ -17,9 +17,11 @@ namespace FinalProject.Data
             _context = context;
         }
 
-        public void Add(TEntity obj)
+        public virtual void Add(TEntity obj)
         {
+           
             _context.Add(obj);
+            SaveChanges();
         }
 
         public void Dispose()
@@ -41,6 +43,8 @@ namespace FinalProject.Data
         {
             var obj = _context.Set<TEntity>().Find(id);
             _context.Remove(obj);
+            SaveChanges();
+
         }
 
         public int SaveChanges()
@@ -51,6 +55,7 @@ namespace FinalProject.Data
         public void Update(TEntity obj)
         {
             _context.Update(obj);
+            SaveChanges();
         }
     }
 }

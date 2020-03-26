@@ -25,9 +25,7 @@ namespace FinalProject.WebApi.Controllers
 
             if (_context.Operations.Count() == 0)
             {
-                var id = Guid.NewGuid();
-               
-                _context.Operations.Add(new Operation { Id = id, Name = "Method Test" , ExecutionDate = DateTime.Now, ExecutionTime  = 10000 });
+                _context.Operations.Add(new Operation { Name = "Method Test1" , ExecutionDate = DateTime.Now, ExecutionTime  = 1234 });
                 _context.SaveChanges();
             }
         }
@@ -51,8 +49,9 @@ namespace FinalProject.WebApi.Controllers
 
         // POST: api/Operation
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Operation value)
         {
+            _repo.Add(value);
         }
 
         // PUT: api/Operation/5

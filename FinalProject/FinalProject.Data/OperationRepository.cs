@@ -17,5 +17,16 @@ namespace FinalProject.Data
         {
             get { return _context as FinalProjectContext; }
         }
+
+
+        public override void Add(Operation obj)
+        {
+            obj.Id = Guid.NewGuid();
+            obj.ExecutionDate = DateTime.Now;
+
+            base.Add(obj);
+          
+        }
+
     }
 }
