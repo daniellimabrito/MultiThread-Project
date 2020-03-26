@@ -3636,11 +3636,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Daniel\\BCIT\\COMP3618\\FinalProject\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\ConsoleApp1\\ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
-      "projectPath": "D:\\Daniel\\BCIT\\COMP3618\\FinalProject\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\ConsoleApp1\\ConsoleApp1.csproj",
       "packagesPath": "C:\\Users\\dnl\\.nuget\\packages\\",
-      "outputPath": "D:\\Daniel\\BCIT\\COMP3618\\FinalProject\\ConsoleApp1\\obj\\",
+      "outputPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3659,8 +3659,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Daniel\\BCIT\\COMP3618\\FinalProject\\FinalProject.Data\\FinalProject.Data.csproj": {
-              "projectPath": "D:\\Daniel\\BCIT\\COMP3618\\FinalProject\\FinalProject.Data\\FinalProject.Data.csproj"
+            "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.Data\\FinalProject.Data.csproj": {
+              "projectPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.Data\\FinalProject.Data.csproj"
             }
           }
         }

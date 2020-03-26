@@ -12327,11 +12327,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Daniel\\BCIT\\COMP3618\\FinalProject\\FinalProject.WebApi\\FinalProject.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.WebApi\\FinalProject.WebApi.csproj",
       "projectName": "FinalProject.WebApi",
-      "projectPath": "D:\\Daniel\\BCIT\\COMP3618\\FinalProject\\FinalProject.WebApi\\FinalProject.WebApi.csproj",
+      "projectPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.WebApi\\FinalProject.WebApi.csproj",
       "packagesPath": "C:\\Users\\dnl\\.nuget\\packages\\",
-      "outputPath": "D:\\Daniel\\BCIT\\COMP3618\\FinalProject\\FinalProject.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12350,11 +12350,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\Daniel\\BCIT\\COMP3618\\FinalProject.Domain\\FinalProject.Domain.csproj": {
-              "projectPath": "D:\\Daniel\\BCIT\\COMP3618\\FinalProject.Domain\\FinalProject.Domain.csproj"
+            "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject.Domain\\FinalProject.Domain.csproj": {
+              "projectPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject.Domain\\FinalProject.Domain.csproj"
             },
-            "D:\\Daniel\\BCIT\\COMP3618\\FinalProject\\FinalProject.Data\\FinalProject.Data.csproj": {
-              "projectPath": "D:\\Daniel\\BCIT\\COMP3618\\FinalProject\\FinalProject.Data\\FinalProject.Data.csproj"
+            "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.Data\\FinalProject.Data.csproj": {
+              "projectPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.Data\\FinalProject.Data.csproj"
             }
           }
         }
