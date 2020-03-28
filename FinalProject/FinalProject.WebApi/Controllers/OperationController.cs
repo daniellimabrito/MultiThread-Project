@@ -25,7 +25,8 @@ namespace FinalProject.WebApi.Controllers
 
             if (_context.Operations.Count() == 0)
             {
-                _context.Operations.Add(new Operation { Name = "Method Test1" , ExecutionDate = DateTime.Now, ExecutionTime  = 1234 });
+                TimeSpan span = new TimeSpan(0, 0, 0, 30, 50);
+                _context.Operations.Add(new Operation { Name = "Method Test1" , ExecutionDate = DateTime.Now, ExecutionTime  = span });
                 _context.SaveChanges();
             }
         }

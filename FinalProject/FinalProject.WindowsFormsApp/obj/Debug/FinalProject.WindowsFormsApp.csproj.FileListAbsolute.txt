@@ -34,3 +34,5 @@ C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.WindowsFormsApp
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.WindowsFormsApp\obj\Debug\FinalProject.WindowsFormsApp.pdb
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.WindowsFormsApp\bin\Debug\System.Net.Http.Formatting.dll
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.WindowsFormsApp\obj\Debug\FinalProject.WindowsFormsApp.exe.config
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.WindowsFormsApp\bin\Debug\FinalProject.Services.dll
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.WindowsFormsApp\bin\Debug\FinalProject.Services.pdb

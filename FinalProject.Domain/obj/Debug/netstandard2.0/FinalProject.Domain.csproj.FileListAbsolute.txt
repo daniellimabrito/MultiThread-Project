@@ -10,7 +10,6 @@ D:\Daniel\BCIT\COMP3618\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProjec
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\bin\Debug\netstandard2.0\FinalProject.Domain.deps.json
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\bin\Debug\netstandard2.0\FinalProject.Domain.dll
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\bin\Debug\netstandard2.0\FinalProject.Domain.pdb
-C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.csprojAssemblyReference.cache
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.csproj.CoreCompileInputs.cache
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.AssemblyInfoInputs.cache
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.AssemblyInfo.cs

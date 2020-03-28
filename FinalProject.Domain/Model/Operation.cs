@@ -8,7 +8,7 @@ namespace FinalProject.Domain.Model
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public double ExecutionTime { get; set; }
+        public TimeSpan ExecutionTime { get; set; }
         public DateTime ExecutionDate  { get; set; }
 
 

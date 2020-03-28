@@ -35,6 +35,16 @@
         "runtime": {
           "bin/placeholder/FinalProject.Domain.dll": {}
         }
+      },
+      "FinalProject.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/FinalProject.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FinalProject.Services.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
@@ -70,6 +80,16 @@
         },
         "runtime": {
           "bin/placeholder/FinalProject.Domain.dll": {}
+        }
+      },
+      "FinalProject.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/FinalProject.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FinalProject.Services.dll": {}
         }
       }
     },
@@ -107,6 +127,16 @@
         "runtime": {
           "bin/placeholder/FinalProject.Domain.dll": {}
         }
+      },
+      "FinalProject.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/FinalProject.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FinalProject.Services.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
@@ -142,6 +172,16 @@
         },
         "runtime": {
           "bin/placeholder/FinalProject.Domain.dll": {}
+        }
+      },
+      "FinalProject.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/FinalProject.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FinalProject.Services.dll": {}
         }
       }
     }
@@ -192,11 +232,17 @@
       "type": "project",
       "path": "../../FinalProject.Domain/FinalProject.Domain.csproj",
       "msbuildProject": "../../FinalProject.Domain/FinalProject.Domain.csproj"
+    },
+    "FinalProject.Services/1.0.0": {
+      "type": "project",
+      "path": "../FinalProject.Services/FinalProject.Services.csproj",
+      "msbuildProject": "../FinalProject.Services/FinalProject.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
       "FinalProject.Domain >= 1.0.0",
+      "FinalProject.Services >= 1.0.0",
       "Microsoft.AspNet.WebApi.Client >= 5.2.4-preview1"
     ]
   },
@@ -229,6 +275,9 @@
           "projectReferences": {
             "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject.Domain\\FinalProject.Domain.csproj": {
               "projectPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject.Domain\\FinalProject.Domain.csproj"
+            },
+            "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.Services\\FinalProject.Services.csproj": {
+              "projectPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.Services\\FinalProject.Services.csproj"
             }
           }
         }

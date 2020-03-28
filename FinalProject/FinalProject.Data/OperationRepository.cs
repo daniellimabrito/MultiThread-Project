@@ -1,7 +1,7 @@
 ﻿using FinalProject.Domain.Model;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace FinalProject.Data
 {
@@ -18,6 +18,12 @@ namespace FinalProject.Data
             get { return _context as FinalProjectContext; }
         }
 
+        public override IEnumerable<Operation> GetAll()
+        {
+            var obj = base.GetAll();
+
+            return obj.OrderByDescending(x => x.ExecutionDate);
+        }
 
         public override void Add(Operation obj)
         {

@@ -1,0 +1,8 @@
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Services\bin\Debug\netstandard2.0\FinalProject.Services.deps.json
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Services\bin\Debug\netstandard2.0\FinalProject.Services.dll
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Services\bin\Debug\netstandard2.0\FinalProject.Services.pdb
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Services\obj\Debug\netstandard2.0\FinalProject.Services.csproj.CoreCompileInputs.cache
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Services\obj\Debug\netstandard2.0\FinalProject.Services.AssemblyInfoInputs.cache
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Services\obj\Debug\netstandard2.0\FinalProject.Services.AssemblyInfo.cs
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Services\obj\Debug\netstandard2.0\FinalProject.Services.dll
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Services\obj\Debug\netstandard2.0\FinalProject.Services.pdb

@@ -13,7 +13,7 @@ namespace FinalProject.Data.Migrations
                 {
                     Id = table.Column<Guid>(nullable: false),
                     Name = table.Column<string>(nullable: true),
-                    ExecutionTime = table.Column<double>(nullable: false),
+                    ExecutionTime = table.Column<TimeSpan>(nullable: false),
                     ExecutionDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
