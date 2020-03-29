@@ -40,7 +40,6 @@
             this.buttonCpuAPM = new System.Windows.Forms.Button();
             this.buttonCpuNPTask = new System.Windows.Forms.Button();
             this.buttonCPUBoundFor = new System.Windows.Forms.Button();
-            this.lblTime = new System.Windows.Forms.Label();
             this.textBoxPerformance = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelMethod = new System.Windows.Forms.Label();
@@ -52,6 +51,10 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxNumThreads = new System.Windows.Forms.ComboBox();
+            this.comboBoxLoops = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._digits)).BeginInit();
             this.panelCPU.SuspendLayout();
@@ -79,11 +82,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(432, 248);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(552, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(552, 193);
             this.dataGridView1.TabIndex = 1;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 86);
             this.label1.Name = "label1";
@@ -93,6 +97,7 @@
             // 
             // lblStatus
             // 
+            this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.Location = new System.Drawing.Point(20, 56);
@@ -106,7 +111,7 @@
             // 
             this.progressBarStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBarStatus.Location = new System.Drawing.Point(0, 413);
+            this.progressBarStatus.Location = new System.Drawing.Point(0, 451);
             this.progressBarStatus.MarqueeAnimationSpeed = 1000000;
             this.progressBarStatus.Maximum = 1000;
             this.progressBarStatus.Name = "progressBarStatus";
@@ -117,7 +122,7 @@
             // _pi
             // 
             this._pi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this._pi.Location = new System.Drawing.Point(23, 177);
+            this._pi.Location = new System.Drawing.Point(22, 220);
             this._pi.Multiline = true;
             this._pi.Name = "_pi";
             this._pi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -127,7 +132,7 @@
             // _calcButtom
             // 
             this._calcButtom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this._calcButtom.Location = new System.Drawing.Point(127, 126);
+            this._calcButtom.Location = new System.Drawing.Point(126, 155);
             this._calcButtom.Name = "_calcButtom";
             this._calcButtom.Size = new System.Drawing.Size(74, 36);
             this._calcButtom.TabIndex = 7;
@@ -137,6 +142,7 @@
             // 
             // _digits
             // 
+            this._digits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._digits.Location = new System.Drawing.Point(83, 84);
             this._digits.Maximum = new decimal(new int[] {
             1000000,
@@ -165,7 +171,7 @@
             // buttonCpuAPM
             // 
             this.buttonCpuAPM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCpuAPM.Location = new System.Drawing.Point(23, 126);
+            this.buttonCpuAPM.Location = new System.Drawing.Point(22, 155);
             this.buttonCpuAPM.Name = "buttonCpuAPM";
             this.buttonCpuAPM.Size = new System.Drawing.Size(75, 36);
             this.buttonCpuAPM.TabIndex = 12;
@@ -176,7 +182,7 @@
             // buttonCpuNPTask
             // 
             this.buttonCpuNPTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCpuNPTask.Location = new System.Drawing.Point(221, 126);
+            this.buttonCpuNPTask.Location = new System.Drawing.Point(220, 155);
             this.buttonCpuNPTask.Name = "buttonCpuNPTask";
             this.buttonCpuNPTask.Size = new System.Drawing.Size(75, 36);
             this.buttonCpuNPTask.TabIndex = 14;
@@ -187,23 +193,13 @@
             // buttonCPUBoundFor
             // 
             this.buttonCPUBoundFor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCPUBoundFor.Location = new System.Drawing.Point(328, 126);
+            this.buttonCPUBoundFor.Location = new System.Drawing.Point(327, 155);
             this.buttonCPUBoundFor.Name = "buttonCPUBoundFor";
             this.buttonCPUBoundFor.Size = new System.Drawing.Size(75, 36);
             this.buttonCPUBoundFor.TabIndex = 15;
             this.buttonCPUBoundFor.Text = "For";
             this.buttonCPUBoundFor.UseVisualStyleBackColor = true;
             this.buttonCPUBoundFor.Click += new System.EventHandler(this.buttonCPUBoundFor_Click);
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(714, 100);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(34, 13);
-            this.lblTime.TabIndex = 16;
-            this.lblTime.Text = "00:00";
-            this.lblTime.Visible = false;
             // 
             // textBoxPerformance
             // 
@@ -231,7 +227,7 @@
             this.labelMethod.AutoSize = true;
             this.labelMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMethod.ForeColor = System.Drawing.Color.Navy;
-            this.labelMethod.Location = new System.Drawing.Point(119, 14);
+            this.labelMethod.Location = new System.Drawing.Point(115, 14);
             this.labelMethod.Name = "labelMethod";
             this.labelMethod.Size = new System.Drawing.Size(63, 20);
             this.labelMethod.TabIndex = 19;
@@ -304,6 +300,8 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.labelMethod);
             this.panel1.Location = new System.Drawing.Point(435, 81);
@@ -316,17 +314,76 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 14);
+            this.label4.Location = new System.Drawing.Point(5, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 20;
             this.label4.Text = "Method: ";
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(218, 86);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Threads:";
+            // 
+            // comboBoxNumThreads
+            // 
+            this.comboBoxNumThreads.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxNumThreads.FormattingEnabled = true;
+            this.comboBoxNumThreads.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "4",
+            "8",
+            "16"});
+            this.comboBoxNumThreads.Location = new System.Drawing.Point(273, 81);
+            this.comboBoxNumThreads.Name = "comboBoxNumThreads";
+            this.comboBoxNumThreads.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxNumThreads.TabIndex = 27;
+            // 
+            // comboBoxLoops
+            // 
+            this.comboBoxLoops.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxLoops.FormattingEnabled = true;
+            this.comboBoxLoops.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.comboBoxLoops.Location = new System.Drawing.Point(273, 108);
+            this.comboBoxLoops.Name = "comboBoxLoops";
+            this.comboBoxLoops.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxLoops.TabIndex = 29;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(218, 113);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 13);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Loops:";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 600);
+            this.ClientSize = new System.Drawing.Size(1036, 662);
+            this.Controls.Add(this.comboBoxLoops);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboBoxNumThreads);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.panelCPU);
             this.Controls.Add(this.labelDatabaseResult);
@@ -334,7 +391,6 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxPerformance);
-            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.buttonCPUBoundFor);
             this.Controls.Add(this.buttonCpuNPTask);
             this.Controls.Add(this.buttonCpuAPM);
@@ -349,6 +405,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormMain";
             this.Text = "Final Project - COMP3618";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._digits)).EndInit();
             this.panelCPU.ResumeLayout(false);
@@ -374,7 +431,6 @@
         private System.Windows.Forms.Button buttonCpuAPM;
         private System.Windows.Forms.Button buttonCpuNPTask;
         private System.Windows.Forms.Button buttonCPUBoundFor;
-        private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.TextBox textBoxPerformance;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelMethod;
@@ -386,6 +442,10 @@
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxNumThreads;
+        private System.Windows.Forms.ComboBox comboBoxLoops;
+        private System.Windows.Forms.Label label6;
     }
 }
 

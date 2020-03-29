@@ -104,50 +104,12 @@ namespace FinalProject.WindowsFormsApp
                     _worker.ReportProgress(j);
                 }
             }
-            lblTime.Text = "Time: " + Convert.ToString(sw.Elapsed);
+         
             textBoxPerformance.Text = Convert.ToString(sw.Elapsed);
             e.Result = 100;
         }
 
-        private async void executeProgressBar()
-        {
-            progressBarStatus.Value = 1;
-            progressBarStatus.Maximum = 100;
-            progressBarStatus.Step = 1;
 
-            var progress = new Progress<int>(v =>
-            {
-                // This lambda is executed in context of UI thread,
-                // so it can safely update form controls
-                progressBarStatus.Value = v;
-            });
-
-            // Run operation in another thread
-            await Task.Run(() => DoWork(progress));
-
-            // TODO: Do something after all calculations
-        }
-
-        private void Calculate(int i)
-        {
-            double pow = Math.Pow(i, i);
-        }
-
-        public void DoWork(IProgress<int> progress)
-        {
-            // This method is executed in the context of
-            // another thread (different than the main UI thread),
-            // so use only thread-safe code
-            for (int j = 0; j < 100000; j++)
-            {
-                Calculate(j);
-
-                // Use progress to notify UI thread that progress has
-                // changed
-                if (progress != null)
-                    progress.Report((j + 1) * 100 / 100000);
-            }
-        }
 
         void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
@@ -232,7 +194,7 @@ namespace FinalProject.WindowsFormsApp
             return jsonString;
         }
 
-
+/*
         static async Task<Operation> GetOperationAllAsync(string path)
         {
             Operation operation = null;
@@ -243,12 +205,12 @@ namespace FinalProject.WindowsFormsApp
             }
             return operation;
         }
-
+*/
         static async Task<Uri> CreateProductAsync(Operation operation)
         {
             HttpResponseMessage response = await client.PostAsJsonAsync(
                 baseUrl, operation);
-             //   "/api/opertion", operation);
+           
             response.EnsureSuccessStatusCode();
 
             // return URI of the created resource.
@@ -268,15 +230,14 @@ namespace FinalProject.WindowsFormsApp
 
 
 
-        private void ParallelFor()
+        private void ParallelFor(int numThreads, int loops)
         {
-            int numProcs = 8, height =10;
+            int numProcs = numThreads, height =loops;
             Task.Factory.StartNew(() =>
             {
                 int nextId = -1; // assign each thread a unique id
                 var threadId = new ThreadLocal<int>(() => Interlocked.Increment(ref nextId));
-
-               
+          
                     var sw = Stopwatch.StartNew(); // time the operation
               
                         Parallel.For(0, height, new ParallelOptions { MaxDegreeOfParallelism = numProcs }, i =>
@@ -284,20 +245,18 @@ namespace FinalProject.WindowsFormsApp
                             int id = threadId.Value;
                       var content =    DoWork(_digits.Value);
                            _pi.AppendText(content);
+                           
+                            _pi.AppendText($" == Executed by Thread {id} == ");
+                           
                         });
-
                     
                     // Return the total time from the task
                     return sw.Elapsed;
-                
 
                 // When the work completes, run the following on the UI thread
             }).ContinueWith(t =>
             {
 
-                // Re-enable controls on the form and display the elapsed time
-               // btnVisualize.Enabled = true;
-                lblTime.Text = "Time: " + t.Result.ToString();
                 textBoxPerformance.Text = t.Result.ToString();
             }, TaskScheduler.FromCurrentSynchronizationContext());
         }
@@ -334,13 +293,17 @@ namespace FinalProject.WindowsFormsApp
         {
             TimeSpan span = TimeSpan.Parse( textBoxPerformance.Text);
             SetOperation(labelMethod.Text, span );
+
+            search();
         }
 
         private void buttonCPUBoundFor_Click(object sender, EventArgs e)
         {
             labelMethod.Text = "CPU Bound - For";
-            executeProgressBar();
-            ParallelFor();
+            //  executeProgressBar();
+            var valThreads = Convert.ToInt32(comboBoxNumThreads.Text);
+            var valLoops = Convert.ToInt32(comboBoxLoops.Text);
+            ParallelFor(valThreads, valLoops);
         }
 
         private void buttonCpuAPM_Click(object sender, EventArgs e)
@@ -380,8 +343,7 @@ namespace FinalProject.WindowsFormsApp
 
             // Close the wait handle.
             result.AsyncWaitHandle.Close();
-
-            lblTime.Text = "Time: " + Convert.ToString(sw.Elapsed);
+         
             textBoxPerformance.Text = Convert.ToString(sw.Elapsed);
             _pi.AppendText($" (The call executed on thread {threadId}). ");
         }
@@ -389,18 +351,21 @@ namespace FinalProject.WindowsFormsApp
         private void buttonCpuNPTask_Click(object sender, EventArgs e)
         {
             labelMethod.Text = "CPU NP Task";
-            executeProgressBar();
 
             var sw = Stopwatch.StartNew(); // time the operation
 
             var test = DoWork(_digits.Value);
             _pi.AppendText(test);
-
-            lblTime.Text = "Time: " + Convert.ToString(sw.Elapsed);
+         
             textBoxPerformance.Text = Convert.ToString(sw.Elapsed);
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            search();
+        }
+
+        private void search()
         {
             dataGridView1.DataSource = GetOperations();
             formatGrid();
@@ -422,6 +387,13 @@ namespace FinalProject.WindowsFormsApp
             progressBarStatus.Value = 0;
             textBoxDatabaseResult.Text = "";
             textBoxPerformance.Text = "";
+
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            comboBoxNumThreads.SelectedText = "8";
+            comboBoxLoops.SelectedText = "4";
 
         }
     }

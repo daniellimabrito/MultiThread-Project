@@ -10,7 +10,7 @@ namespace FinalProject.Services
         // The method to be executed asynchronously.
         public string TestMethod(int callDuration, out int threadId)
         {
-            Console.WriteLine("Test method begins.");
+           // Console.WriteLine("Test method begins.");
             Thread.Sleep(callDuration);
             threadId = Thread.CurrentThread.ManagedThreadId;
             return String.Format("My call time was {0}.", callDuration.ToString());
