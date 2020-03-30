@@ -188,10 +188,11 @@
   },
   "libraries": {
     "Microsoft.AspNet.WebApi.Client/5.2.4-preview1": {
-      "sha512": "k6Y6OpqClD6sVPXTmHzwz2msac7Amhk2g1EEnZCS8WqQd3iNiKoAmrxv0/VJMvwDp7H0oI31RS0NALCmra6N6w==",
+      "sha512": "LytCfaYQaB9MzYJDdn8XFqqSGvNvwx1SjUWlFay0OdxV8VZkL0Dt+L32fehjYRxctvIGVWNWtBbfnfMFPT6/9w==",
       "type": "package",
       "path": "microsoft.aspnet.webapi.client/5.2.4-preview1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net45/System.Net.Http.Formatting.dll",
         "lib/net45/System.Net.Http.Formatting.xml",
@@ -204,10 +205,12 @@
       ]
     },
     "Newtonsoft.Json/6.0.4": {
-      "sha512": "POcHreXEQ0vqCFkYLlQ7+WYiVFvi5z/mhZSMIxLorb1Mm8VUWwSpyFXNEC4Um4APWSaRTkzaYXP/dWrFrub/BA==",
+      "sha512": "FyQLmEpjsCrEP+znauLDGAi+h6i9YnaMkITlfIoiM4RYyX3nki306bTHsr/0okiIvIc7BJhQTbOAIZVocccFUw==",
       "type": "package",
       "path": "newtonsoft.json/6.0.4",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -247,20 +250,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dnl\\.nuget\\packages\\": {}
+    "C:\\Users\\Divya\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.WindowsFormsApp\\FinalProject.WindowsFormsApp.csproj",
+      "projectUniqueName": "C:\\Users\\Divya\\Documents\\BCIT\\AdvacedCSharp\\FinalProject\\TeamProject\\daniellimabrito\\Comp3618-Project\\FinalProject\\FinalProject.WindowsFormsApp\\FinalProject.WindowsFormsApp.csproj",
       "projectName": "FinalProject.WindowsFormsApp",
-      "projectPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.WindowsFormsApp\\FinalProject.WindowsFormsApp.csproj",
-      "packagesPath": "C:\\Users\\dnl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.WindowsFormsApp\\obj\\",
+      "projectPath": "C:\\Users\\Divya\\Documents\\BCIT\\AdvacedCSharp\\FinalProject\\TeamProject\\daniellimabrito\\Comp3618-Project\\FinalProject\\FinalProject.WindowsFormsApp\\FinalProject.WindowsFormsApp.csproj",
+      "packagesPath": "C:\\Users\\Divya\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Divya\\Documents\\BCIT\\AdvacedCSharp\\FinalProject\\TeamProject\\daniellimabrito\\Comp3618-Project\\FinalProject\\FinalProject.WindowsFormsApp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\dnl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Divya\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -273,11 +276,11 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
-            "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject.Domain\\FinalProject.Domain.csproj": {
-              "projectPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject.Domain\\FinalProject.Domain.csproj"
+            "C:\\Users\\Divya\\Documents\\BCIT\\AdvacedCSharp\\FinalProject\\TeamProject\\daniellimabrito\\Comp3618-Project\\FinalProject.Domain\\FinalProject.Domain.csproj": {
+              "projectPath": "C:\\Users\\Divya\\Documents\\BCIT\\AdvacedCSharp\\FinalProject\\TeamProject\\daniellimabrito\\Comp3618-Project\\FinalProject.Domain\\FinalProject.Domain.csproj"
             },
-            "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.Services\\FinalProject.Services.csproj": {
-              "projectPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject\\FinalProject.Services\\FinalProject.Services.csproj"
+            "C:\\Users\\Divya\\Documents\\BCIT\\AdvacedCSharp\\FinalProject\\TeamProject\\daniellimabrito\\Comp3618-Project\\FinalProject\\FinalProject.Services\\FinalProject.Services.csproj": {
+              "projectPath": "C:\\Users\\Divya\\Documents\\BCIT\\AdvacedCSharp\\FinalProject\\TeamProject\\daniellimabrito\\Comp3618-Project\\FinalProject\\FinalProject.Services\\FinalProject.Services.csproj"
             }
           }
         }

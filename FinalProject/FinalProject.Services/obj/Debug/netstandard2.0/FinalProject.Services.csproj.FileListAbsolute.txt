@@ -7,3 +7,10 @@ C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Services\obj\De
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Services\obj\Debug\netstandard2.0\FinalProject.Services.dll
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Services\obj\Debug\netstandard2.0\FinalProject.Services.pdb
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Services\obj\Debug\netstandard2.0\FinalProject.Services.csprojAssemblyReference.cache
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Services\bin\Debug\netstandard2.0\FinalProject.Services.deps.json
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Services\bin\Debug\netstandard2.0\FinalProject.Services.dll
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Services\bin\Debug\netstandard2.0\FinalProject.Services.pdb
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Services\obj\Debug\netstandard2.0\FinalProject.Services.AssemblyInfoInputs.cache
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Services\obj\Debug\netstandard2.0\FinalProject.Services.AssemblyInfo.cs
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Services\obj\Debug\netstandard2.0\FinalProject.Services.dll
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Services\obj\Debug\netstandard2.0\FinalProject.Services.pdb

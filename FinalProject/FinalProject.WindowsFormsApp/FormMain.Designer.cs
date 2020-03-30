@@ -55,6 +55,7 @@
             this.comboBoxNumThreads = new System.Windows.Forms.ComboBox();
             this.comboBoxLoops = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._digits)).BeginInit();
             this.panelCPU.SuspendLayout();
@@ -267,6 +268,7 @@
             // panelCPU
             // 
             this.panelCPU.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCPU.Controls.Add(this.comboBox1);
             this.panelCPU.Controls.Add(this.label3);
             this.panelCPU.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCPU.Location = new System.Drawing.Point(0, 0);
@@ -375,6 +377,14 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "Loops:";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(220, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,6 +456,7 @@
         private System.Windows.Forms.ComboBox comboBoxNumThreads;
         private System.Windows.Forms.ComboBox comboBoxLoops;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

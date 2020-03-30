@@ -22,3 +22,14 @@ C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\obj\Debug\
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.csproj.CopyComplete
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.dll
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.pdb
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Data.deps.json
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Data.dll
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Data.pdb
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Domain.dll
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Data\bin\Debug\netstandard2.0\FinalProject.Domain.pdb
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.csprojAssemblyReference.cache
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.AssemblyInfoInputs.cache
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.AssemblyInfo.cs
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.csproj.CopyComplete
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.dll
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProject\daniellimabrito\Comp3618-Project\FinalProject\FinalProject.Data\obj\Debug\netstandard2.0\FinalProject.Data.pdb

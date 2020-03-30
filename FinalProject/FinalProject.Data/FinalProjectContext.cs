@@ -25,7 +25,7 @@ namespace FinalProject.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server = (localdb)\\mssqllocaldb; Database = FinalProjectData; Trusted_Connection = True; ");
+            optionsBuilder.UseSqlServer("Server = (localdb)\\sqlexpress; Database = FinalProjectData; Trusted_Connection = True; ");
 
             base.OnConfiguring(optionsBuilder);
         }

@@ -30,10 +30,11 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "a/iSwnRZb+LHFk49hQOyThh/ZNC3vsbZsF65XwQIb863qF6msmhdQtxGXFL28Ob2NsCz/drEj28BJd/YPpLRBg==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -177,23 +178,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dnl\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Divya\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject.Domain\\FinalProject.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Divya\\Documents\\BCIT\\AdvacedCSharp\\FinalProject\\TeamProject\\daniellimabrito\\Comp3618-Project\\FinalProject.Domain\\FinalProject.Domain.csproj",
       "projectName": "FinalProject.Domain",
-      "projectPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject.Domain\\FinalProject.Domain.csproj",
-      "packagesPath": "C:\\Users\\dnl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dnl\\Documents\\GitHub\\Comp3618\\FinalProject.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Divya\\Documents\\BCIT\\AdvacedCSharp\\FinalProject\\TeamProject\\daniellimabrito\\Comp3618-Project\\FinalProject.Domain\\FinalProject.Domain.csproj",
+      "packagesPath": "C:\\Users\\Divya\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Divya\\Documents\\BCIT\\AdvacedCSharp\\FinalProject\\TeamProject\\daniellimabrito\\Comp3618-Project\\FinalProject.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\dnl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Divya\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -225,10 +222,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
