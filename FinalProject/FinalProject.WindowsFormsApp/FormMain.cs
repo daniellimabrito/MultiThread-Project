@@ -798,5 +798,15 @@ namespace FinalProject.WindowsFormsApp
 
             button4.Text = button4.Text == "Calculate" ? "Cancel" : "Calculate";
         }
+
+        private void buttonCancelIO_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            dataGridViewIO.DataSource = null;
+            labelMethodIO.Text = "-";
+           
+            textBoxDatabaseResultIO.Text = "";
+            textBoxPerformanceIO.Text = "";
+        }
     }
 }
