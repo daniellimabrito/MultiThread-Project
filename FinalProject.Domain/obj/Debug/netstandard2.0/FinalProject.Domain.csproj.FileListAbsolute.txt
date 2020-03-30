@@ -15,3 +15,4 @@ C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.AssemblyInfo.cs
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.dll
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.pdb
+C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.csprojAssemblyReference.cache

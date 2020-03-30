@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonSave = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCPU = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.progressBarStatus = new System.Windows.Forms.ProgressBar();
@@ -55,10 +61,40 @@
             this.comboBoxNumThreads = new System.Windows.Forms.ComboBox();
             this.comboBoxLoops = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.fswCheckForNewFiles = new System.IO.FileSystemWatcher();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.buttonNPTaskIO = new System.Windows.Forms.Button();
+            this.labelFilePath = new System.Windows.Forms.Label();
+            this.buttonApmIO = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.buttonOpenFile = new System.Windows.Forms.Button();
+            this.buttonForIO = new System.Windows.Forms.Button();
+            this.buttonThreadPool = new System.Windows.Forms.Button();
+            this.buttonResultsIO = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxDatabaseResultIO = new System.Windows.Forms.TextBox();
+            this.buttonCancelIO = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxPerformanceIO = new System.Windows.Forms.TextBox();
+            this.dataGridViewIO = new System.Windows.Forms.DataGridView();
+            this.buttonSaveIO = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.labelMethodIO = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._digits)).BeginInit();
             this.panelCPU.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fswCheckForNewFiles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIO)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonSave
@@ -73,17 +109,41 @@
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
-            // dataGridView1
+            // dataGridViewCPU
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(432, 248);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(552, 193);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridViewCPU.AllowUserToAddRows = false;
+            this.dataGridViewCPU.AllowUserToDeleteRows = false;
+            this.dataGridViewCPU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCPU.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewCPU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCPU.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewCPU.Location = new System.Drawing.Point(432, 248);
+            this.dataGridViewCPU.Name = "dataGridViewCPU";
+            this.dataGridViewCPU.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCPU.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewCPU.Size = new System.Drawing.Size(552, 193);
+            this.dataGridViewCPU.TabIndex = 1;
             // 
             // label1
             // 
@@ -293,7 +353,7 @@
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 36);
             this.buttonSearch.TabIndex = 24;
-            this.buttonSearch.Text = "Search";
+            this.buttonSearch.Text = "Results";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
@@ -375,11 +435,311 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "Loops:";
             // 
+            // fswCheckForNewFiles
+            // 
+            this.fswCheckForNewFiles.EnableRaisingEvents = true;
+            this.fswCheckForNewFiles.NotifyFilter = System.IO.NotifyFilters.LastAccess;
+            this.fswCheckForNewFiles.Path = "D:\\MARSCOMMANDS\\INPUT";
+            this.fswCheckForNewFiles.SynchronizingObject = this;
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            this.fileSystemWatcher1.Changed += new System.IO.FileSystemEventHandler(this.fileSystemWatcher1_Changed);
+            // 
+            // buttonNPTaskIO
+            // 
+            this.buttonNPTaskIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonNPTaskIO.Location = new System.Drawing.Point(219, 612);
+            this.buttonNPTaskIO.Name = "buttonNPTaskIO";
+            this.buttonNPTaskIO.Size = new System.Drawing.Size(75, 36);
+            this.buttonNPTaskIO.TabIndex = 35;
+            this.buttonNPTaskIO.Text = "NP Task";
+            this.buttonNPTaskIO.UseVisualStyleBackColor = true;
+            this.buttonNPTaskIO.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // labelFilePath
+            // 
+            this.labelFilePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFilePath.AutoSize = true;
+            this.labelFilePath.Location = new System.Drawing.Point(111, 565);
+            this.labelFilePath.Name = "labelFilePath";
+            this.labelFilePath.Size = new System.Drawing.Size(16, 13);
+            this.labelFilePath.TabIndex = 36;
+            this.labelFilePath.Text = "...";
+            // 
+            // buttonApmIO
+            // 
+            this.buttonApmIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonApmIO.Location = new System.Drawing.Point(115, 612);
+            this.buttonApmIO.Name = "buttonApmIO";
+            this.buttonApmIO.Size = new System.Drawing.Size(75, 36);
+            this.buttonApmIO.TabIndex = 37;
+            this.buttonApmIO.Text = "APM";
+            this.buttonApmIO.UseVisualStyleBackColor = true;
+            this.buttonApmIO.Click += new System.EventHandler(this.buttonApmIO_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // buttonOpenFile
+            // 
+            this.buttonOpenFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOpenFile.Location = new System.Drawing.Point(23, 560);
+            this.buttonOpenFile.Name = "buttonOpenFile";
+            this.buttonOpenFile.Size = new System.Drawing.Size(75, 23);
+            this.buttonOpenFile.TabIndex = 38;
+            this.buttonOpenFile.Text = "Select File...";
+            this.buttonOpenFile.UseVisualStyleBackColor = true;
+            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
+            // 
+            // buttonForIO
+            // 
+            this.buttonForIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonForIO.Location = new System.Drawing.Point(321, 612);
+            this.buttonForIO.Name = "buttonForIO";
+            this.buttonForIO.Size = new System.Drawing.Size(75, 36);
+            this.buttonForIO.TabIndex = 39;
+            this.buttonForIO.Text = "For";
+            this.buttonForIO.UseVisualStyleBackColor = true;
+            this.buttonForIO.Click += new System.EventHandler(this.buttonForIO_Click);
+            // 
+            // buttonThreadPool
+            // 
+            this.buttonThreadPool.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonThreadPool.Location = new System.Drawing.Point(23, 612);
+            this.buttonThreadPool.Name = "buttonThreadPool";
+            this.buttonThreadPool.Size = new System.Drawing.Size(75, 35);
+            this.buttonThreadPool.TabIndex = 40;
+            this.buttonThreadPool.Text = "Thread Pool";
+            this.buttonThreadPool.UseVisualStyleBackColor = true;
+            this.buttonThreadPool.Click += new System.EventHandler(this.buttonThreadPool_Click);
+            // 
+            // buttonResultsIO
+            // 
+            this.buttonResultsIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonResultsIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonResultsIO.Location = new System.Drawing.Point(432, 691);
+            this.buttonResultsIO.Name = "buttonResultsIO";
+            this.buttonResultsIO.Size = new System.Drawing.Size(75, 36);
+            this.buttonResultsIO.TabIndex = 48;
+            this.buttonResultsIO.Text = "Results";
+            this.buttonResultsIO.UseVisualStyleBackColor = true;
+            this.buttonResultsIO.Click += new System.EventHandler(this.buttonResultsIO_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(617, 707);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(182, 20);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "Database Performance: ";
+            // 
+            // textBoxDatabaseResultIO
+            // 
+            this.textBoxDatabaseResultIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxDatabaseResultIO.Location = new System.Drawing.Point(805, 707);
+            this.textBoxDatabaseResultIO.Name = "textBoxDatabaseResultIO";
+            this.textBoxDatabaseResultIO.Size = new System.Drawing.Size(138, 20);
+            this.textBoxDatabaseResultIO.TabIndex = 46;
+            // 
+            // buttonCancelIO
+            // 
+            this.buttonCancelIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancelIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelIO.Location = new System.Drawing.Point(803, 601);
+            this.buttonCancelIO.Name = "buttonCancelIO";
+            this.buttonCancelIO.Size = new System.Drawing.Size(75, 36);
+            this.buttonCancelIO.TabIndex = 45;
+            this.buttonCancelIO.Text = "Cancel";
+            this.buttonCancelIO.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(444, 604);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 20);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "Performance: ";
+            // 
+            // textBoxPerformanceIO
+            // 
+            this.textBoxPerformanceIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPerformanceIO.Location = new System.Drawing.Point(558, 606);
+            this.textBoxPerformanceIO.Name = "textBoxPerformanceIO";
+            this.textBoxPerformanceIO.ReadOnly = true;
+            this.textBoxPerformanceIO.Size = new System.Drawing.Size(110, 20);
+            this.textBoxPerformanceIO.TabIndex = 43;
+            // 
+            // dataGridViewIO
+            // 
+            this.dataGridViewIO.AllowUserToAddRows = false;
+            this.dataGridViewIO.AllowUserToDeleteRows = false;
+            this.dataGridViewIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewIO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewIO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewIO.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewIO.Location = new System.Drawing.Point(432, 733);
+            this.dataGridViewIO.Name = "dataGridViewIO";
+            this.dataGridViewIO.ReadOnly = true;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewIO.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewIO.Size = new System.Drawing.Size(552, 193);
+            this.dataGridViewIO.TabIndex = 42;
+            // 
+            // buttonSaveIO
+            // 
+            this.buttonSaveIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSaveIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveIO.Location = new System.Drawing.Point(708, 601);
+            this.buttonSaveIO.Name = "buttonSaveIO";
+            this.buttonSaveIO.Size = new System.Drawing.Size(75, 36);
+            this.buttonSaveIO.TabIndex = 41;
+            this.buttonSaveIO.Text = "Save";
+            this.buttonSaveIO.UseVisualStyleBackColor = true;
+            this.buttonSaveIO.Click += new System.EventHandler(this.buttonSaveIO_Click);
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(5, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(71, 20);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Method: ";
+            // 
+            // labelMethodIO
+            // 
+            this.labelMethodIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMethodIO.AutoSize = true;
+            this.labelMethodIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMethodIO.ForeColor = System.Drawing.Color.Navy;
+            this.labelMethodIO.Location = new System.Drawing.Point(115, 14);
+            this.labelMethodIO.Name = "labelMethodIO";
+            this.labelMethodIO.Size = new System.Drawing.Size(63, 20);
+            this.labelMethodIO.TabIndex = 19;
+            this.labelMethodIO.Text = "Method";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.labelMethodIO);
+            this.panel2.Location = new System.Drawing.Point(435, 556);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(267, 110);
+            this.panel2.TabIndex = 49;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(319, 664);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 36);
+            this.button3.TabIndex = 50;
+            this.button3.Text = "NP Task For";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(12, 733);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(380, 221);
+            this.textBox1.TabIndex = 51;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Location = new System.Drawing.Point(226, 664);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 36);
+            this.button4.TabIndex = 52;
+            this.button4.Text = "BW";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Maroon;
+            this.label10.Location = new System.Drawing.Point(16, 7);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(160, 36);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "IO BOUND";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Location = new System.Drawing.Point(0, 497);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1036, 53);
+            this.panel3.TabIndex = 53;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 662);
+            this.ClientSize = new System.Drawing.Size(1036, 963);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buttonResultsIO);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBoxDatabaseResultIO);
+            this.Controls.Add(this.buttonCancelIO);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBoxPerformanceIO);
+            this.Controls.Add(this.dataGridViewIO);
+            this.Controls.Add(this.buttonSaveIO);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.buttonThreadPool);
+            this.Controls.Add(this.buttonForIO);
+            this.Controls.Add(this.buttonOpenFile);
+            this.Controls.Add(this.buttonApmIO);
+            this.Controls.Add(this.labelFilePath);
+            this.Controls.Add(this.buttonNPTaskIO);
             this.Controls.Add(this.comboBoxLoops);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxNumThreads);
@@ -400,18 +760,25 @@
             this.Controls.Add(this._pi);
             this.Controls.Add(this._calcButtom);
             this.Controls.Add(this._digits);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewCPU);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.panel1);
             this.Name = "FormMain";
             this.Text = "Final Project - COMP3618";
             this.Load += new System.EventHandler(this.FormMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCPU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._digits)).EndInit();
             this.panelCPU.ResumeLayout(false);
             this.panelCPU.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fswCheckForNewFiles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIO)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,7 +787,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewCPU;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.ProgressBar progressBarStatus;
@@ -446,6 +813,31 @@
         private System.Windows.Forms.ComboBox comboBoxNumThreads;
         private System.Windows.Forms.ComboBox comboBoxLoops;
         private System.Windows.Forms.Label label6;
+        private System.IO.FileSystemWatcher fswCheckForNewFiles;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Button buttonNPTaskIO;
+        private System.Windows.Forms.Label labelFilePath;
+        private System.Windows.Forms.Button buttonApmIO;
+        private System.Windows.Forms.Button buttonOpenFile;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button buttonThreadPool;
+        private System.Windows.Forms.Button buttonForIO;
+        private System.Windows.Forms.Button buttonResultsIO;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxDatabaseResultIO;
+        private System.Windows.Forms.Button buttonCancelIO;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxPerformanceIO;
+        private System.Windows.Forms.DataGridView dataGridViewIO;
+        private System.Windows.Forms.Button buttonSaveIO;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelMethodIO;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label10;
     }
 }
 
