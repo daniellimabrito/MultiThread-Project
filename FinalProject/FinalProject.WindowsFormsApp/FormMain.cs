@@ -808,5 +808,10 @@ namespace FinalProject.WindowsFormsApp
             textBoxDatabaseResultIO.Text = "";
             textBoxPerformanceIO.Text = "";
         }
+
+        private void dataGridViewCPU_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

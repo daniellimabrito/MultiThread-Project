@@ -16,3 +16,10 @@ C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.dll
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.pdb
 C:\Users\dnl\Documents\GitHub\Comp3618\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.csprojAssemblyReference.cache
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProjectB\daniellimabrito\Comp3618-Project\FinalProject.Domain\bin\Debug\netstandard2.0\FinalProject.Domain.deps.json
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProjectB\daniellimabrito\Comp3618-Project\FinalProject.Domain\bin\Debug\netstandard2.0\FinalProject.Domain.dll
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProjectB\daniellimabrito\Comp3618-Project\FinalProject.Domain\bin\Debug\netstandard2.0\FinalProject.Domain.pdb
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProjectB\daniellimabrito\Comp3618-Project\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.AssemblyInfoInputs.cache
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProjectB\daniellimabrito\Comp3618-Project\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.AssemblyInfo.cs
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProjectB\daniellimabrito\Comp3618-Project\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.dll
+C:\Users\Divya\Documents\BCIT\AdvacedCSharp\FinalProject\TeamProjectB\daniellimabrito\Comp3618-Project\FinalProject.Domain\obj\Debug\netstandard2.0\FinalProject.Domain.pdb
