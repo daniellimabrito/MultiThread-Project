@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonSave = new System.Windows.Forms.Button();
             this.dataGridViewCPU = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,7 +69,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.buttonOpenFile = new System.Windows.Forms.Button();
             this.buttonForIO = new System.Windows.Forms.Button();
-            this.buttonThreadPool = new System.Windows.Forms.Button();
             this.buttonResultsIO = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxDatabaseResultIO = new System.Windows.Forms.TextBox();
@@ -86,6 +85,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonThreadPool = new System.Windows.Forms.Button();
+            this.buttonFolder = new System.Windows.Forms.Button();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.labelSelectedFolder = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._digits)).BeginInit();
             this.panelCPU.SuspendLayout();
@@ -95,13 +100,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIO)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonSave
             // 
             this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.Location = new System.Drawing.Point(708, 126);
+            this.buttonSave.Location = new System.Drawing.Point(897, 126);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 36);
             this.buttonSave.TabIndex = 0;
@@ -114,42 +121,42 @@
             this.dataGridViewCPU.AllowUserToAddRows = false;
             this.dataGridViewCPU.AllowUserToDeleteRows = false;
             this.dataGridViewCPU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCPU.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCPU.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCPU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCPU.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridViewCPU.Location = new System.Drawing.Point(432, 248);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCPU.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewCPU.Location = new System.Drawing.Point(621, 248);
             this.dataGridViewCPU.Name = "dataGridViewCPU";
             this.dataGridViewCPU.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCPU.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGridViewCPU.Size = new System.Drawing.Size(552, 193);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCPU.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewCPU.Size = new System.Drawing.Size(552, 141);
             this.dataGridViewCPU.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 86);
+            this.label1.Location = new System.Drawing.Point(20, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 11;
@@ -160,7 +167,7 @@
             this.lblStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(20, 56);
+            this.lblStatus.Location = new System.Drawing.Point(20, 60);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(107, 18);
             this.lblStatus.TabIndex = 10;
@@ -171,28 +178,28 @@
             // 
             this.progressBarStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBarStatus.Location = new System.Drawing.Point(0, 451);
+            this.progressBarStatus.Location = new System.Drawing.Point(0, 405);
             this.progressBarStatus.MarqueeAnimationSpeed = 1000000;
             this.progressBarStatus.Maximum = 1000;
             this.progressBarStatus.Name = "progressBarStatus";
-            this.progressBarStatus.Size = new System.Drawing.Size(1036, 23);
+            this.progressBarStatus.Size = new System.Drawing.Size(1225, 23);
             this.progressBarStatus.Step = 1000;
             this.progressBarStatus.TabIndex = 9;
             // 
             // _pi
             // 
             this._pi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this._pi.Location = new System.Drawing.Point(22, 220);
+            this._pi.Location = new System.Drawing.Point(22, 224);
             this._pi.Multiline = true;
             this._pi.Name = "_pi";
             this._pi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this._pi.Size = new System.Drawing.Size(380, 221);
+            this._pi.Size = new System.Drawing.Size(380, 165);
             this._pi.TabIndex = 8;
             // 
             // _calcButtom
             // 
             this._calcButtom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this._calcButtom.Location = new System.Drawing.Point(126, 155);
+            this._calcButtom.Location = new System.Drawing.Point(126, 159);
             this._calcButtom.Name = "_calcButtom";
             this._calcButtom.Size = new System.Drawing.Size(74, 36);
             this._calcButtom.TabIndex = 7;
@@ -203,7 +210,7 @@
             // _digits
             // 
             this._digits.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this._digits.Location = new System.Drawing.Point(83, 84);
+            this._digits.Location = new System.Drawing.Point(83, 88);
             this._digits.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -231,7 +238,7 @@
             // buttonCpuAPM
             // 
             this.buttonCpuAPM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCpuAPM.Location = new System.Drawing.Point(22, 155);
+            this.buttonCpuAPM.Location = new System.Drawing.Point(22, 159);
             this.buttonCpuAPM.Name = "buttonCpuAPM";
             this.buttonCpuAPM.Size = new System.Drawing.Size(75, 36);
             this.buttonCpuAPM.TabIndex = 12;
@@ -242,7 +249,7 @@
             // buttonCpuNPTask
             // 
             this.buttonCpuNPTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCpuNPTask.Location = new System.Drawing.Point(220, 155);
+            this.buttonCpuNPTask.Location = new System.Drawing.Point(220, 159);
             this.buttonCpuNPTask.Name = "buttonCpuNPTask";
             this.buttonCpuNPTask.Size = new System.Drawing.Size(75, 36);
             this.buttonCpuNPTask.TabIndex = 14;
@@ -253,7 +260,7 @@
             // buttonCPUBoundFor
             // 
             this.buttonCPUBoundFor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCPUBoundFor.Location = new System.Drawing.Point(327, 155);
+            this.buttonCPUBoundFor.Location = new System.Drawing.Point(327, 159);
             this.buttonCPUBoundFor.Name = "buttonCPUBoundFor";
             this.buttonCPUBoundFor.Size = new System.Drawing.Size(75, 36);
             this.buttonCPUBoundFor.TabIndex = 15;
@@ -264,7 +271,7 @@
             // textBoxPerformance
             // 
             this.textBoxPerformance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPerformance.Location = new System.Drawing.Point(558, 131);
+            this.textBoxPerformance.Location = new System.Drawing.Point(747, 131);
             this.textBoxPerformance.Name = "textBoxPerformance";
             this.textBoxPerformance.ReadOnly = true;
             this.textBoxPerformance.Size = new System.Drawing.Size(110, 20);
@@ -275,7 +282,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(444, 129);
+            this.label2.Location = new System.Drawing.Point(633, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 20);
             this.label2.TabIndex = 18;
@@ -297,7 +304,7 @@
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(803, 126);
+            this.buttonCancel.Location = new System.Drawing.Point(992, 126);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 36);
             this.buttonCancel.TabIndex = 20;
@@ -310,7 +317,7 @@
             this.labelDatabaseResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDatabaseResult.AutoSize = true;
             this.labelDatabaseResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDatabaseResult.Location = new System.Drawing.Point(617, 220);
+            this.labelDatabaseResult.Location = new System.Drawing.Point(806, 220);
             this.labelDatabaseResult.Name = "labelDatabaseResult";
             this.labelDatabaseResult.Size = new System.Drawing.Size(182, 20);
             this.labelDatabaseResult.TabIndex = 22;
@@ -319,7 +326,7 @@
             // textBoxDatabaseResult
             // 
             this.textBoxDatabaseResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxDatabaseResult.Location = new System.Drawing.Point(805, 220);
+            this.textBoxDatabaseResult.Location = new System.Drawing.Point(994, 220);
             this.textBoxDatabaseResult.Name = "textBoxDatabaseResult";
             this.textBoxDatabaseResult.Size = new System.Drawing.Size(138, 20);
             this.textBoxDatabaseResult.TabIndex = 21;
@@ -331,7 +338,7 @@
             this.panelCPU.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCPU.Location = new System.Drawing.Point(0, 0);
             this.panelCPU.Name = "panelCPU";
-            this.panelCPU.Size = new System.Drawing.Size(1036, 53);
+            this.panelCPU.Size = new System.Drawing.Size(1225, 53);
             this.panelCPU.TabIndex = 23;
             // 
             // label3
@@ -349,7 +356,7 @@
             // 
             this.buttonSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.Location = new System.Drawing.Point(432, 206);
+            this.buttonSearch.Location = new System.Drawing.Point(621, 206);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 36);
             this.buttonSearch.TabIndex = 24;
@@ -364,7 +371,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.labelMethod);
-            this.panel1.Location = new System.Drawing.Point(435, 81);
+            this.panel1.Location = new System.Drawing.Point(624, 81);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 110);
             this.panel1.TabIndex = 25;
@@ -384,7 +391,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(218, 86);
+            this.label5.Location = new System.Drawing.Point(218, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 26;
@@ -400,7 +407,7 @@
             "4",
             "8",
             "16"});
-            this.comboBoxNumThreads.Location = new System.Drawing.Point(273, 81);
+            this.comboBoxNumThreads.Location = new System.Drawing.Point(273, 85);
             this.comboBoxNumThreads.Name = "comboBoxNumThreads";
             this.comboBoxNumThreads.Size = new System.Drawing.Size(121, 21);
             this.comboBoxNumThreads.TabIndex = 27;
@@ -420,7 +427,7 @@
             "8",
             "9",
             "10"});
-            this.comboBoxLoops.Location = new System.Drawing.Point(273, 108);
+            this.comboBoxLoops.Location = new System.Drawing.Point(273, 112);
             this.comboBoxLoops.Name = "comboBoxLoops";
             this.comboBoxLoops.Size = new System.Drawing.Size(121, 21);
             this.comboBoxLoops.TabIndex = 29;
@@ -429,7 +436,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(218, 113);
+            this.label6.Location = new System.Drawing.Point(218, 117);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 28;
@@ -451,7 +458,7 @@
             // buttonNPTaskIO
             // 
             this.buttonNPTaskIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonNPTaskIO.Location = new System.Drawing.Point(219, 612);
+            this.buttonNPTaskIO.Location = new System.Drawing.Point(307, 59);
             this.buttonNPTaskIO.Name = "buttonNPTaskIO";
             this.buttonNPTaskIO.Size = new System.Drawing.Size(75, 36);
             this.buttonNPTaskIO.TabIndex = 35;
@@ -463,7 +470,7 @@
             // 
             this.labelFilePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelFilePath.AutoSize = true;
-            this.labelFilePath.Location = new System.Drawing.Point(111, 565);
+            this.labelFilePath.Location = new System.Drawing.Point(111, 526);
             this.labelFilePath.Name = "labelFilePath";
             this.labelFilePath.Size = new System.Drawing.Size(16, 13);
             this.labelFilePath.TabIndex = 36;
@@ -472,7 +479,7 @@
             // buttonApmIO
             // 
             this.buttonApmIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonApmIO.Location = new System.Drawing.Point(115, 612);
+            this.buttonApmIO.Location = new System.Drawing.Point(208, 59);
             this.buttonApmIO.Name = "buttonApmIO";
             this.buttonApmIO.Size = new System.Drawing.Size(75, 36);
             this.buttonApmIO.TabIndex = 37;
@@ -487,9 +494,10 @@
             // buttonOpenFile
             // 
             this.buttonOpenFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOpenFile.Location = new System.Drawing.Point(23, 560);
+            this.buttonOpenFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonOpenFile.Location = new System.Drawing.Point(23, 516);
             this.buttonOpenFile.Name = "buttonOpenFile";
-            this.buttonOpenFile.Size = new System.Drawing.Size(75, 23);
+            this.buttonOpenFile.Size = new System.Drawing.Size(75, 32);
             this.buttonOpenFile.TabIndex = 38;
             this.buttonOpenFile.Text = "Select File...";
             this.buttonOpenFile.UseVisualStyleBackColor = true;
@@ -498,7 +506,7 @@
             // buttonForIO
             // 
             this.buttonForIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonForIO.Location = new System.Drawing.Point(321, 612);
+            this.buttonForIO.Location = new System.Drawing.Point(11, 57);
             this.buttonForIO.Name = "buttonForIO";
             this.buttonForIO.Size = new System.Drawing.Size(75, 36);
             this.buttonForIO.TabIndex = 39;
@@ -506,22 +514,11 @@
             this.buttonForIO.UseVisualStyleBackColor = true;
             this.buttonForIO.Click += new System.EventHandler(this.buttonForIO_Click);
             // 
-            // buttonThreadPool
-            // 
-            this.buttonThreadPool.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonThreadPool.Location = new System.Drawing.Point(23, 612);
-            this.buttonThreadPool.Name = "buttonThreadPool";
-            this.buttonThreadPool.Size = new System.Drawing.Size(75, 35);
-            this.buttonThreadPool.TabIndex = 40;
-            this.buttonThreadPool.Text = "Thread Pool";
-            this.buttonThreadPool.UseVisualStyleBackColor = true;
-            this.buttonThreadPool.Click += new System.EventHandler(this.buttonThreadPool_Click);
-            // 
             // buttonResultsIO
             // 
             this.buttonResultsIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonResultsIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonResultsIO.Location = new System.Drawing.Point(432, 691);
+            this.buttonResultsIO.Location = new System.Drawing.Point(621, 638);
             this.buttonResultsIO.Name = "buttonResultsIO";
             this.buttonResultsIO.Size = new System.Drawing.Size(75, 36);
             this.buttonResultsIO.TabIndex = 48;
@@ -534,7 +531,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(617, 707);
+            this.label7.Location = new System.Drawing.Point(806, 654);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(182, 20);
             this.label7.TabIndex = 47;
@@ -543,7 +540,7 @@
             // textBoxDatabaseResultIO
             // 
             this.textBoxDatabaseResultIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxDatabaseResultIO.Location = new System.Drawing.Point(805, 707);
+            this.textBoxDatabaseResultIO.Location = new System.Drawing.Point(994, 654);
             this.textBoxDatabaseResultIO.Name = "textBoxDatabaseResultIO";
             this.textBoxDatabaseResultIO.Size = new System.Drawing.Size(138, 20);
             this.textBoxDatabaseResultIO.TabIndex = 46;
@@ -552,7 +549,7 @@
             // 
             this.buttonCancelIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelIO.Location = new System.Drawing.Point(803, 601);
+            this.buttonCancelIO.Location = new System.Drawing.Point(992, 548);
             this.buttonCancelIO.Name = "buttonCancelIO";
             this.buttonCancelIO.Size = new System.Drawing.Size(75, 36);
             this.buttonCancelIO.TabIndex = 45;
@@ -565,7 +562,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(444, 604);
+            this.label8.Location = new System.Drawing.Point(633, 551);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 20);
             this.label8.TabIndex = 44;
@@ -574,7 +571,7 @@
             // textBoxPerformanceIO
             // 
             this.textBoxPerformanceIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPerformanceIO.Location = new System.Drawing.Point(558, 606);
+            this.textBoxPerformanceIO.Location = new System.Drawing.Point(747, 553);
             this.textBoxPerformanceIO.Name = "textBoxPerformanceIO";
             this.textBoxPerformanceIO.ReadOnly = true;
             this.textBoxPerformanceIO.Size = new System.Drawing.Size(110, 20);
@@ -585,42 +582,42 @@
             this.dataGridViewIO.AllowUserToAddRows = false;
             this.dataGridViewIO.AllowUserToDeleteRows = false;
             this.dataGridViewIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewIO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewIO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewIO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewIO.DefaultCellStyle = dataGridViewCellStyle17;
-            this.dataGridViewIO.Location = new System.Drawing.Point(432, 733);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewIO.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewIO.Location = new System.Drawing.Point(621, 680);
             this.dataGridViewIO.Name = "dataGridViewIO";
             this.dataGridViewIO.ReadOnly = true;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewIO.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridViewIO.Size = new System.Drawing.Size(552, 193);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewIO.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewIO.Size = new System.Drawing.Size(552, 232);
             this.dataGridViewIO.TabIndex = 42;
             // 
             // buttonSaveIO
             // 
             this.buttonSaveIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSaveIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveIO.Location = new System.Drawing.Point(708, 601);
+            this.buttonSaveIO.Location = new System.Drawing.Point(897, 548);
             this.buttonSaveIO.Name = "buttonSaveIO";
             this.buttonSaveIO.Size = new System.Drawing.Size(75, 36);
             this.buttonSaveIO.TabIndex = 41;
@@ -658,7 +655,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.labelMethodIO);
-            this.panel2.Location = new System.Drawing.Point(435, 556);
+            this.panel2.Location = new System.Drawing.Point(624, 503);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(267, 110);
             this.panel2.TabIndex = 49;
@@ -666,7 +663,7 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(319, 664);
+            this.button3.Location = new System.Drawing.Point(102, 57);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 36);
             this.button3.TabIndex = 50;
@@ -677,17 +674,17 @@
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(12, 733);
+            this.textBox1.Location = new System.Drawing.Point(23, 726);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(380, 221);
+            this.textBox1.Size = new System.Drawing.Size(380, 186);
             this.textBox1.TabIndex = 51;
             // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(226, 664);
+            this.button4.Location = new System.Drawing.Point(114, 59);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 36);
             this.button4.TabIndex = 52;
@@ -712,20 +709,81 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Location = new System.Drawing.Point(0, 497);
+            this.panel3.Location = new System.Drawing.Point(0, 434);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1036, 53);
+            this.panel3.Size = new System.Drawing.Size(1225, 53);
             this.panel3.TabIndex = 53;
+            // 
+            // buttonThreadPool
+            // 
+            this.buttonThreadPool.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonThreadPool.Location = new System.Drawing.Point(10, 59);
+            this.buttonThreadPool.Name = "buttonThreadPool";
+            this.buttonThreadPool.Size = new System.Drawing.Size(75, 36);
+            this.buttonThreadPool.TabIndex = 54;
+            this.buttonThreadPool.Text = "Thread Pool";
+            this.buttonThreadPool.UseVisualStyleBackColor = true;
+            this.buttonThreadPool.Click += new System.EventHandler(this.buttonThreadPool_Click);
+            // 
+            // buttonFolder
+            // 
+            this.buttonFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonFolder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonFolder.Location = new System.Drawing.Point(11, 19);
+            this.buttonFolder.Name = "buttonFolder";
+            this.buttonFolder.Size = new System.Drawing.Size(81, 32);
+            this.buttonFolder.TabIndex = 55;
+            this.buttonFolder.Text = "Select Folder";
+            this.buttonFolder.UseVisualStyleBackColor = true;
+            this.buttonFolder.Click += new System.EventHandler(this.buttonFolder_Click);
+            // 
+            // labelSelectedFolder
+            // 
+            this.labelSelectedFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSelectedFolder.AutoSize = true;
+            this.labelSelectedFolder.Location = new System.Drawing.Point(99, 29);
+            this.labelSelectedFolder.Name = "labelSelectedFolder";
+            this.labelSelectedFolder.Size = new System.Drawing.Size(16, 13);
+            this.labelSelectedFolder.TabIndex = 56;
+            this.labelSelectedFolder.Text = "...";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.buttonThreadPool);
+            this.groupBox1.Controls.Add(this.buttonApmIO);
+            this.groupBox1.Controls.Add(this.buttonNPTaskIO);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.groupBox1.Location = new System.Drawing.Point(12, 494);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(390, 104);
+            this.groupBox1.TabIndex = 57;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Read File Content";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.labelSelectedFolder);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.buttonFolder);
+            this.groupBox2.Controls.Add(this.buttonForIO);
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.groupBox2.Location = new System.Drawing.Point(12, 604);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(390, 105);
+            this.groupBox2.TabIndex = 58;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Check Files in Folder";
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 963);
+            this.ClientSize = new System.Drawing.Size(1225, 940);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonResultsIO);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxDatabaseResultIO);
@@ -735,12 +793,8 @@
             this.Controls.Add(this.dataGridViewIO);
             this.Controls.Add(this.buttonSaveIO);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.buttonThreadPool);
-            this.Controls.Add(this.buttonForIO);
             this.Controls.Add(this.buttonOpenFile);
-            this.Controls.Add(this.buttonApmIO);
             this.Controls.Add(this.labelFilePath);
-            this.Controls.Add(this.buttonNPTaskIO);
             this.Controls.Add(this.comboBoxLoops);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxNumThreads);
@@ -764,7 +818,10 @@
             this.Controls.Add(this.dataGridViewCPU);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Final Project - COMP3618";
             this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCPU)).EndInit();
@@ -780,6 +837,9 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -821,7 +881,6 @@
         private System.Windows.Forms.Button buttonApmIO;
         private System.Windows.Forms.Button buttonOpenFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button buttonThreadPool;
         private System.Windows.Forms.Button buttonForIO;
         private System.Windows.Forms.Button buttonResultsIO;
         private System.Windows.Forms.Label label7;
@@ -839,6 +898,12 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button buttonThreadPool;
+        private System.Windows.Forms.Label labelSelectedFolder;
+        private System.Windows.Forms.Button buttonFolder;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 

@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinalProject.Domain.Model;
 using FinalProject.Services;
-using MarsEncrypter;
+using System.Configuration;
 using Newtonsoft.Json;
 
 namespace FinalProject.WindowsFormsApp
@@ -27,8 +27,9 @@ namespace FinalProject.WindowsFormsApp
         const string baseUrl = "http://localhost:54503/api/operation";
 
         private static string fileSelected = "";
-        private static TextBox textMethod = new TextBox();
-        private static TextBox textTime = new TextBox();
+        private static string folderSelected = "";
+        public static StringBuilder textMethod = new StringBuilder();
+        public static TextBox textTime = new TextBox();
 
 
 
@@ -46,82 +47,11 @@ namespace FinalProject.WindowsFormsApp
             _workerIO.RunWorkerCompleted += workerIO_RunWorkerCompleted;
         }
 
-        private void workerIO_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (e.Cancelled)
-            {
-                lblStatus.Text = "Cancelled by user - " + lblStatus.Text;
-                lblStatus.ForeColor = Color.Red;
-            }
-            else
-            {
-                lblStatus.ForeColor = Color.Green;
-                lblStatus.Text = "Done... Calc result: " + e.Result + "%";
-            }
-
-            button4.Text = "Calculate";
-        }
-
-        private void workerIO_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void workerIO_DoWork(object sender, DoWorkEventArgs e)
-        {
-            StringBuilder contents = new StringBuilder();
-            string nextLine;
-            int lineCounter = 1;
-
-            int size = -1;
-            //   string file = @"D:\MARSCOMMANDS\enwik8";
-            //  string file = "D:\\MARSCOMMANDS\\INPUT\\Rover1.txt";
-
-            var sw = Stopwatch.StartNew(); // time the operation
-
-            if (_workerIO.CancellationPending == true)
-            {
-                e.Cancel = true;
-                return;
-            }
-
-            using (var stream = new FileStream(fileSelected, FileMode.Open, FileAccess.Read, FileShare.Read, DefaultBufferSize, DefaultOptions))
-            {
-                using (var reader = new StreamReader(fileSelected))
-                {
-
-                    while ((nextLine = reader.ReadLine()) != null)
-                    {
-                        contents.AppendFormat("{0}. ", lineCounter);
-                        contents.Append(nextLine);
-                        contents.AppendLine();
-                        lineCounter++;
-
-                        textBox1.AppendText(nextLine);
-                        textBox1.AppendText(Environment.NewLine);
-
-                        if (_workerIO.CancellationPending == true)
-                        {
-                            textBox1.AppendText("<<Cancelled>>");
-                            e.Cancel = true;
-                            return;
-                        }
-                        _workerIO.ReportProgress(lineCounter);
-
-                    }
-
-                }
-            }
-
-            textBoxPerformanceIO.Text = Convert.ToString(sw.Elapsed);
-            textBox1.AppendText("Ending BW I/O...");
-        }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
             comboBoxNumThreads.SelectedText = "8";
-            comboBoxLoops.SelectedText = "4";      
-
+            comboBoxLoops.SelectedText = "2";
         }
 
         private void _calcButtom_Click(object sender, EventArgs e)
@@ -492,56 +422,8 @@ namespace FinalProject.WindowsFormsApp
             progressBarStatus.Value = 0;
             textBoxDatabaseResult.Text = "";
             textBoxPerformance.Text = "";
-
-
         }
 
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var FullPath = @"D:\MARSCOMMANDS\INPUT";
-            //   QueueFileEncryption(FullPath);
-            // Add its name to the ListBox
-            //    MonitorDirectory(FullPath);
-            // Commented
-            //  libFilesEncrypted.Items.Add(e.Name);
-           
-        }
-
-
-
-        private  void button2_Click(object sender, EventArgs e)
-        {
-            StringBuilder contents = new StringBuilder();
-            string nextLine;
-            int lineCounter = 1;
-
-            //var openPicker = new FileOpenPicker();
-            //openPicker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
-            //openPicker.FileTypeFilter.Add(".txt");
-            //StorageFile selectedFile = await openPicker.PickSingleFileAsync();
-
-            //using (StreamReader reader = new StreamReader(await selectedFile.OpenStreamForReadAsync()))
-            //{
-            //    while ((nextLine = await reader.ReadLineAsync()) != null)
-            //    {
-            //        contents.AppendFormat("{0}. ", lineCounter);
-            //        contents.Append(nextLine);
-            //        contents.AppendLine();
-            //        lineCounter++;
-            //        if (lineCounter > 3)
-            //        {
-            //            contents.AppendLine("Only first 3 lines shown.");
-            //            break;
-            //        }
-
-            //        _pi.AppendText(nextLine);
-            //        _pi.AppendText("");
-            //    }
-            //}
-            //DisplayContentsBlock.Text = contents.ToString();
-        }
 
         private void fileSystemWatcher1_Changed(object sender, FileSystemEventArgs e)
         {
@@ -550,24 +432,35 @@ namespace FinalProject.WindowsFormsApp
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (IsValidPath(labelFilePath.Text))
+            {
+                ExecuteNPTaskIO();
+            }
+            else
+            {
+                MessageBox.Show("Select File.", "COMP3618");
+            }
+        }
+
+        private void ExecuteNPTaskIO()
+        {
             labelMethodIO.Text = "IO NP Task";
             StringBuilder contents = new StringBuilder();
             string nextLine;
             int lineCounter = 1;
 
             int size = -1;
-         //   string file = @"D:\MARSCOMMANDS\enwik8";
-         //   string file = "D:\\MARSCOMMANDS\\INPUT\\Rover1.txt";
+
             try
             {
                 var sw = Stopwatch.StartNew(); // time the operation
 
                 string text = File.ReadAllText(fileSelected);
                 size = text.Length;
-               
+
                 using (StreamReader reader = new StreamReader(fileSelected))
                 {
-                    while ((nextLine =  reader.ReadLine()) != null)
+                    while ((nextLine = reader.ReadLine()) != null)
                     {
                         contents.AppendFormat("{0}. ", lineCounter);
                         contents.Append(nextLine);
@@ -581,23 +474,27 @@ namespace FinalProject.WindowsFormsApp
 
                         textBox1.AppendText(nextLine);
                         textBox1.AppendText("");
-
-                     
                     }
                 }
                 textBoxPerformanceIO.Text = Convert.ToString(sw.Elapsed);
             }
             catch (IOException)
-            {}
-         }
+            { }
+        }
 
         private const FileOptions DefaultOptions = FileOptions.Asynchronous | FileOptions.SequentialScan;
         private const int DefaultBufferSize = 4096;
 
         private  void buttonApmIO_Click(object sender, EventArgs e)
         {
-            ExecuteAPMIO();
-
+            if (IsValidPath(labelFilePath.Text))
+            {
+                ExecuteAPMIO();
+            }
+            else
+            {
+                MessageBox.Show("Select File.", "COMP3618");
+            }
         }
 
         private async void ExecuteAPMIO()
@@ -654,104 +551,59 @@ namespace FinalProject.WindowsFormsApp
 
         }
 
-        private void buttonThreadPool_Click(object sender, EventArgs e)
+        private void buttonFolder_Click(object sender, EventArgs e)
         {
-          //  Stopwatch mywatch = new Stopwatch();
+            DialogResult result = folderBrowserDialog1.ShowDialog();
 
-           // mywatch.Start();
-            ProcessWithThreadPoolMethod();
-          //  ProcessWithThreadMethod();
-            // mywatch.Stop();
-
-            //   Console.WriteLine("Time consumed by ProcessWithThreadPoolMethod is : " + mywatch.ElapsedTicks.ToString());
-            // textBoxPerformanceIO.Text = mywatch.Elapsed.ToString();
-            textBoxPerformanceIO.Text = textTime.Text;
-           textBox1.Text = textMethod.Text;
-          //  mywatch.Reset();
-
-        }
-
-        static void ProcessWithThreadPoolMethod()
-        {
-            for (int i = 0; i <= 1; i++)
+            if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowserDialog1.SelectedPath)) // Test result.
             {
-                ThreadPool.QueueUserWorkItem(new WaitCallback(Process));
+                folderSelected = folderBrowserDialog1.SelectedPath;
+                labelSelectedFolder.Text = folderSelected;
+              //  buttonApmIO.Enabled = true;
+              //  buttonNPTaskIO.Enabled = true;
             }
         }
 
-        static void ProcessWithThreadMethod()
-        {
-            for (int i = 0; i <= 10; i++)
-            {
-                Thread obj = new Thread(Process);
-                obj.Start();
-            }
-        }
-
-        static  void Process(object callback)
-        {
-
-            StringBuilder contents = new StringBuilder();
-            string nextLine;
-            int lineCounter = 1;
-
-            int size = -1;
-            //   string file = @"D:\MARSCOMMANDS\enwik8";
-               fileSelected = "D:\\MARSCOMMANDS\\INPUT\\Rover1.txt";
-
-            var sw = Stopwatch.StartNew(); // time the operation
-
-            using (var stream = new FileStream(fileSelected, FileMode.Open, FileAccess.Read, FileShare.Read, DefaultBufferSize, DefaultOptions))
-            {
-                using (var reader = new StreamReader(fileSelected))
-                {
-
-                    while ((nextLine =  reader.ReadLine()) != null)
-                    {
-                        contents.AppendFormat("{0}. ", lineCounter);
-                        contents.Append(nextLine);
-                        contents.AppendLine();
-                        lineCounter++;
-
-                        textMethod.AppendText(nextLine);
-                        textMethod.AppendText(Environment.NewLine);
-
-                    }
-
-                }
-            }
-
-            textTime.Text = Convert.ToString(sw.Elapsed);
-            textMethod.AppendText("Ending APM I/O...");
-        }
 
         private void buttonForIO_Click(object sender, EventArgs e)
         {
-            labelMethodIO.Text = "IO For";
-            //   var path = @"C:\Program Files";
 
-            var path = @"D:\MARSCOMMANDS\";
-
-            ExecuteForIOAsync(path);
+            if (IsValidPath(labelSelectedFolder.Text))
+            { 
+                labelMethodIO.Text = "IO For";
+                //   var path = @"C:\Program Files";
+                var path = folderSelected;
+                ExecuteForIOAsync(path);
+            }
+            else
+            {
+                MessageBox.Show("Select Folder.", "COMP3618");
+            }
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-          //  var path = @"C:\Program Files";
-
-            var path = @"D:\MARSCOMMANDS\";
-
-            ExecuteForIOAsync(path, false);
+            if (IsValidPath(labelSelectedFolder.Text))
+            {
+                //  var path = @"C:\Program Files";
+                labelMethodIO.Text = "IO NP Task For";
+                var path = folderSelected;
+                ExecuteForIOAsync(path, false);
+            }
+            else
+            {
+                MessageBox.Show("Select Folder.", "COMP3618");
+            }
         }
 
-        private  void ExecuteForIOAsync(string dirPath = @"D:\MARSCOMMANDS\", bool isAsync = true)
+        private  void ExecuteForIOAsync(string dirPath = @"C:\Program Files", bool isAsync = true)
         {
             ParallelIO.TraverseTreeParallelForEach(dirPath, (f) =>
             {
                 // Exceptions are no-ops.
                 try
                 {
-                    var reader = new StreamReader(fileSelected);
+                   // var reader = new StreamReader(fileSelected);
 
                     // Do nothing with the data except read it.
                     byte[] data = File.ReadAllBytes(f);
@@ -784,19 +636,90 @@ namespace FinalProject.WindowsFormsApp
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (button4.Text == "Calculate")
+            if (IsValidPath(labelFilePath.Text))
             {
-                textBox1.Clear();
-                _workerIO.RunWorkerAsync();
+                if (button4.Text == "BW")
+                {
+                    textBox1.Clear();
+                    _workerIO.RunWorkerAsync();
+                }
+                else
+                {
+                    _workerIO.CancelAsync();
+                    textBox1.AppendText("<<Cancelled>>");
+                }
+
+
+                button4.Text = button4.Text == "BW" ? "Cancel" : "BW";
             }
             else
             {
-                _workerIO.CancelAsync();
-                textBox1.AppendText("<<Cancelled>>");
+                MessageBox.Show("Select File.", "COMP3618");
+            }
+        }
+
+        private void workerIO_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+            {
+                lblStatus.Text = "Cancelled by user - " + lblStatus.Text;
+                lblStatus.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblStatus.ForeColor = Color.Green;
+                lblStatus.Text = "Done... Calc result: " + e.Result + "%";
             }
 
+            button4.Text = "BW";
+        }
 
-            button4.Text = button4.Text == "Calculate" ? "Cancel" : "Calculate";
+        private void workerIO_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+
+        }
+
+        private void workerIO_DoWork(object sender, DoWorkEventArgs e)
+        {
+            StringBuilder contents = new StringBuilder();
+            string nextLine;
+            int lineCounter = 1;
+
+            var sw = Stopwatch.StartNew(); // time the operation
+
+            if (_workerIO.CancellationPending == true)
+            {
+                e.Cancel = true;
+                return;
+            }
+
+            using (var stream = new FileStream(fileSelected, FileMode.Open, FileAccess.Read, FileShare.Read, DefaultBufferSize, DefaultOptions))
+            {
+                using (var reader = new StreamReader(fileSelected))
+                {
+                    while ((nextLine = reader.ReadLine()) != null)
+                    {
+                        contents.AppendFormat("{0}. ", lineCounter);
+                        contents.Append(nextLine);
+                        contents.AppendLine();
+                        lineCounter++;
+
+                        textBox1.AppendText(nextLine);
+                        textBox1.AppendText(Environment.NewLine);
+
+                        if (_workerIO.CancellationPending == true)
+                        {
+                            textBox1.AppendText("<<Cancelled>>");
+                            e.Cancel = true;
+                            return;
+                        }
+                        _workerIO.ReportProgress(lineCounter);
+                    }
+                }
+            }
+
+            textBoxPerformanceIO.Text = Convert.ToString(sw.Elapsed);
+            textBox1.AppendText("Ending BW I/O...");
         }
 
         private void buttonCancelIO_Click(object sender, EventArgs e)
@@ -804,9 +727,91 @@ namespace FinalProject.WindowsFormsApp
             textBox1.Clear();
             dataGridViewIO.DataSource = null;
             labelMethodIO.Text = "-";
+
+            labelFilePath.Text = "...";
+            labelSelectedFolder.Text = "...";
            
             textBoxDatabaseResultIO.Text = "";
             textBoxPerformanceIO.Text = "";
         }
+
+        private void buttonThreadPool_Click(object sender, EventArgs e)
+        {
+            if (IsValidPath(labelFilePath.Text))
+            {
+                labelMethodIO.Text = "IO Thread Pool";
+                ExecuteThreadPool();
+
+                textBox1.Text = textMethod.ToString();
+                textBoxPerformanceIO.Text = textTime.Text;
+                labelSelectedFolder.Text = "...";
+            }
+            else
+            {
+                MessageBox.Show("Select File.", "COMP3618");
+            }
+        }
+
+        class ThreadParams
+        {
+            public string sourceFileName { get; set; }
+        }
+
+        private void ExecuteThreadPool()
+        {
+            //custom thread parameter object
+            ThreadParams tParams = new ThreadParams();
+
+            //get the file name from command prompt - user input
+            tParams.sourceFileName = labelFilePath.Text;
+          
+            //queue the file copy thread for execution
+            ThreadPool.QueueUserWorkItem(new WaitCallback(readFileThreadPool), tParams);
+        }
+
+        private static void readFileThreadPool(object tParams)
+        {
+            //read the custom thread parameter object
+            ThreadParams tParamsInner = tParams as ThreadParams;
+            string sourceFileName = @tParamsInner.sourceFileName;
+
+            StringBuilder contents = new StringBuilder();
+            string nextLine;
+            int lineCounter = 1;
+
+            var sw = Stopwatch.StartNew(); // time the operation
+
+            using (var stream = new FileStream(sourceFileName, FileMode.Open, FileAccess.Read, FileShare.Read, DefaultBufferSize, DefaultOptions))
+            {
+                using (var reader = new StreamReader(sourceFileName))
+                {
+
+                    while ((nextLine = reader.ReadLine()) != null)
+                    {
+                        contents.AppendFormat("{0}. ", lineCounter);
+                        contents.Append(nextLine);
+                        contents.AppendLine();
+                        lineCounter++;
+
+                        textMethod.Append(nextLine);
+                        textMethod.AppendLine();
+
+                    }
+
+                }
+            }
+
+            textTime.Text = Convert.ToString(sw.Elapsed);
+            textMethod.AppendLine("Ending Tread Pool I/O...");
+
+          
+        }
+
+        private bool IsValidPath(string path)
+        {
+            return path != "...";
+        }
+
+
     }
 }
