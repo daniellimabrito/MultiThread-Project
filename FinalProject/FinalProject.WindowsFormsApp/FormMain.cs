@@ -434,6 +434,7 @@ namespace FinalProject.WindowsFormsApp
         {
             if (IsValidPath(labelFilePath.Text))
             {
+                textBox1.Clear();
                 ExecuteNPTaskIO();
             }
             else
@@ -489,6 +490,7 @@ namespace FinalProject.WindowsFormsApp
         {
             if (IsValidPath(labelFilePath.Text))
             {
+                textBox1.Clear();
                 ExecuteAPMIO();
             }
             else
@@ -567,9 +569,10 @@ namespace FinalProject.WindowsFormsApp
 
         private void buttonForIO_Click(object sender, EventArgs e)
         {
-
+           
             if (IsValidPath(labelSelectedFolder.Text))
-            { 
+            {
+                textBox1.Clear();
                 labelMethodIO.Text = "IO For";
                 //   var path = @"C:\Program Files";
                 var path = folderSelected;
@@ -585,6 +588,7 @@ namespace FinalProject.WindowsFormsApp
         {
             if (IsValidPath(labelSelectedFolder.Text))
             {
+                textBox1.Clear();
                 //  var path = @"C:\Program Files";
                 labelMethodIO.Text = "IO NP Task For";
                 var path = folderSelected;
@@ -638,6 +642,8 @@ namespace FinalProject.WindowsFormsApp
         {
             if (IsValidPath(labelFilePath.Text))
             {
+                textBox1.Clear();
+
                 if (button4.Text == "BW")
                 {
                     textBox1.Clear();
@@ -739,6 +745,7 @@ namespace FinalProject.WindowsFormsApp
         {
             if (IsValidPath(labelFilePath.Text))
             {
+                textBox1.Clear();
                 labelMethodIO.Text = "IO Thread Pool";
                 ExecuteThreadPool();
 
